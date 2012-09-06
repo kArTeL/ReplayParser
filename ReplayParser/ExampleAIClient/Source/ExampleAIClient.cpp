@@ -25,48 +25,13 @@ void appendToFile(std::string in) {
 	myfile.close();
 }
 
-void handleEvent(Event *e) {
-	int seconds=Broodwar->getFrameCount()/24;
-	int minutes=seconds/60;
-	seconds%=60;
-	std::stringstream s;
-
-	// A unit was just made
-	if( (e->getType() == EventType::UnitMorph || e->getType() == EventType::UnitCreate) ) {
-		// Unit is a building
-		if (Broodwar->getFrameCount()>1 && e->getUnit()->getType().isBuilding())
-		{
-			// Persist the build order
-			s << "Time: " << minutes << ":" << seconds << std::endl
-				<< "Player id: " << e->getUnit()->getPlayer()->getID() << std::endl
-				<< "Player unit score: " << e->getUnit()->getPlayer()->getUnitScore() << std::endl
-				<< "Building made: " << e->getUnit()->getType().getName().c_str() << std::endl
-				<< "At position: " << e->getUnit()->getPosition().x() << "," << e->getUnit()->getPosition().y()
-				<< std::endl << std::endl;
-			appendToFile(s.str());
-		} 
-	}
-}
-
-void logAllEvents(Event *e) {
-	int seconds=Broodwar->getFrameCount()/24;
-	int minutes=seconds/60;
-	seconds%=60;
-	if(Broodwar->getFrameCount()>1) {
-		std::stringstream s;
-		s << "Time: " << minutes << ":" << seconds << " ; "
-			<< "Event type: " << e->getType() << std::endl;
-		appendToFile(s.str());
-	}
-}
-
 void logToCsv(Event *e) {
 	int seconds=Broodwar->getFrameCount()/24;
 
 	// A unit was just made
 	if( (e->getType() == EventType::UnitMorph || e->getType() == EventType::UnitCreate) ) {
 		// Unit is a building
-		if (Broodwar->getFrameCount()>1 && e->getUnit()->getType().isBuilding())
+		if (e->getUnit()->getType().isBuilding())
 		{
 			/*
 			 * Time (in seconds),
@@ -91,16 +56,22 @@ void logToCsv(Event *e) {
 	}
 }
 
+void getWorkerCount(Event *e) {
+	
+}
+
 int main(int argc, const char* argv[])
 {
 	BWAPI::BWAPI_init();
 	printf("Connecting...");
 	reconnect();
+	
 	while(true)
 	{
 		printf("waiting to enter match\n");
 		while (!Broodwar->isInGame())
 		{
+			BWAPI::BWAPI_init();
 			BWAPI::BWAPIClient.update();
 			if (!BWAPI::BWAPIClient.isConnected())
 			{
@@ -128,20 +99,17 @@ int main(int argc, const char* argv[])
 			}
 		}
 
-		// List the format of the outputted file
-		std::stringstream s;
-		s << "********************" << std::endl
-		  << "Time (in seconds), Player ID, Player race, Player unitscore, Building name, Building position x, Building position y" << std::endl
-		  << "********************" << std::endl;
-		appendToFile(s.str());
-
+		
+		
 		while(Broodwar->isInGame())
 		{
+			
 			for(std::list<Event>::iterator e=Broodwar->getEvents().begin();e!=Broodwar->getEvents().end();e++)
 			{
 				// Ignore some events
-				if( e->getType() != EventType::MatchFrame && e->getType() != EventType::None )
+				if( e->getType() != EventType::MatchFrame && e->getType() != EventType::None && Broodwar->getFrameCount()>1) {
 					logToCsv(&*e);
+				}
 				//logAllEvents(&*e);
 				//handleEvent(&*e);
 			}
@@ -153,8 +121,8 @@ int main(int argc, const char* argv[])
 				reconnect();
 			}
 		}
-		printf("Game ended\n");
-		appendToFile("Game ended\n");
+		appendToFile("Game ended\n\n");
+		
 
 	}
 	system("pause");

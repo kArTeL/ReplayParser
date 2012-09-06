@@ -1,0 +1,142 @@
+50,1,"Protoss",350,"Protoss Pylon",3552,2944
+75,0,"Zerg",550,"Zerg Spawning Pool",176,3616
+80,1,"Protoss",450,"Protoss Forge",3344,3008
+123,1,"Protoss",650,"Protoss Photon Cannon",3424,3008
+127,1,"Protoss",650,"Protoss Photon Cannon",3424,2944
+147,0,"Zerg",950,"Zerg Hatchery",1216,3632
+160,1,"Protoss",750,"Protoss Nexus",3584,2864
+169,0,"Zerg",1000,"Zerg Extractor",288,3584
+171,1,"Protoss",750,"Protoss Gateway",3328,2928
+182,0,"Zerg",1050,"Zerg Hatchery",512,1264
+187,1,"Protoss",750,"Protoss Assimilator",3808,3616
+196,1,"Protoss",800,"Protoss Pylon",3776,3712
+220,0,"Zerg",1150,"Zerg Lair",288,3760
+221,1,"Protoss",900,"Protoss Cybernetics Core",3952,3616
+258,1,"Protoss",1200,"Protoss Assimilator",3616,2688
+267,1,"Protoss",1250,"Protoss Stargate",3680,3792
+285,1,"Protoss",1450,"Protoss Citadel of Adun",3696,3712
+287,0,"Zerg",1650,"Zerg Spire",288,3840
+298,1,"Protoss",1550,"Protoss Pylon",3776,3488
+332,1,"Protoss",1800,"Protoss Templar Archives",3696,3648
+333,0,"Zerg",2300,"Zerg Hatchery",1120,3440
+337,1,"Protoss",1800,"Protoss Pylon",3840,3488
+357,0,"Zerg",2450,"Zerg Hatchery",672,1136
+364,1,"Protoss",2450,"Protoss Gateway",3808,3408
+379,0,"Zerg",2650,"Zerg Hatchery",288,240
+383,1,"Protoss",3000,"Protoss Pylon",3552,2784
+397,0,"Zerg",2950,"Zerg Creep Colony",576,1152
+400,0,"Zerg",2950,"Zerg Creep Colony",1216,3520
+403,1,"Protoss",3450,"Protoss Pylon",3840,3936
+412,0,"Zerg",3700,"Zerg Sunken Colony",576,1152
+415,0,"Zerg",3800,"Zerg Sunken Colony",1216,3520
+421,1,"Protoss",4125,"Protoss Gateway",3680,3408
+425,0,"Zerg",3900,"Zerg Hydralisk Den",624,1216
+427,0,"Zerg",3900,"Zerg Extractor",1248,3808
+430,1,"Protoss",4125,"Protoss Photon Cannon",3776,3904
+430,0,"Zerg",3900,"Zerg Evolution Chamber",1232,3456
+433,1,"Protoss",4125,"Protoss Pylon",3744,2656
+439,1,"Protoss",4225,"Protoss Gateway",3680,3504
+455,1,"Protoss",5375,"Protoss Pylon",4064,3904
+463,0,"Zerg",4600,"Zerg Creep Colony",1280,3520
+463,1,"Protoss",5375,"Protoss Pylon",4064,3680
+463,0,"Zerg",4600,"Zerg Creep Colony",1152,3520
+467,0,"Zerg",4600,"Zerg Creep Colony",512,1184
+471,0,"Zerg",4700,"Zerg Creep Colony",544,1376
+484,0,"Zerg",4850,"Zerg Sunken Colony",512,1184
+485,0,"Zerg",4850,"Zerg Spore Colony",1152,3520
+486,0,"Zerg",4850,"Zerg Creep Colony",1152,3520
+486,0,"Zerg",4850,"Zerg Spore Colony",1280,3520
+486,0,"Zerg",4850,"Zerg Sunken Colony",1152,3520
+495,0,"Zerg",5450,"Zerg Spore Colony",544,1376
+497,1,"Protoss",6125,"Protoss Pylon",3392,3904
+505,1,"Protoss",6325,"Protoss Pylon",3392,3648
+540,0,"Zerg",7350,"Zerg Extractor",480,1440
+562,1,"Protoss",7475,"Protoss Pylon",2432,3744
+568,1,"Protoss",7675,"Protoss Pylon",4064,3616
+592,1,"Protoss",8825,"Protoss Nexus",2464,3824
+596,1,"Protoss",8825,"Protoss Photon Cannon",2496,3744
+598,1,"Protoss",9175,"Protoss Gateway",3552,3504
+598,1,"Protoss",9175,"Protoss Photon Cannon",2368,3840
+600,0,"Zerg",9100,"Zerg Hatchery",320,336
+603,1,"Protoss",9175,"Protoss Photon Cannon",2336,3776
+606,1,"Protoss",9625,"Protoss Pylon",2144,3680
+612,1,"Protoss",9625,"Protoss Gateway",3552,3408
+633,1,"Protoss",9925,"Protoss Robotics Facility",3760,3968
+689,1,"Protoss",12225,"Protoss Gateway",3936,3440
+692,0,"Zerg",13350,"Zerg Extractor",288,64
+705,1,"Protoss",12625,"Protoss Pylon",3904,3936
+705,1,"Protoss",12625,"Protoss Observatory",3856,4000
+720,1,"Protoss",13675,"Protoss Pylon",3808,3008
+721,1,"Protoss",13675,"Protoss Pylon",3488,2784
+730,1,"Protoss",14175,"Protoss Pylon",4064,3968
+741,1,"Protoss",14175,"Protoss Pylon",2272,3872
+742,1,"Protoss",14175,"Protoss Assimilator",2688,3904
+746,0,"Zerg",16425,"Zerg Evolution Chamber",304,3904
+749,0,"Zerg",16425,"Zerg Evolution Chamber",464,3680
+749,1,"Protoss",14175,"Protoss Pylon",4064,3552
+751,0,"Zerg",16900,"Zerg Hatchery",448,240
+766,1,"Protoss",14750,"Protoss Photon Cannon",2208,3872
+788,1,"Protoss",16175,"Protoss Pylon",3808,1792
+789,1,"Protoss",16175,"Protoss Nexus",3808,1712
+829,1,"Protoss",17550,"Protoss Photon Cannon",3744,1792
+829,1,"Protoss",17550,"Protoss Photon Cannon",3680,1792
+830,1,"Protoss",17550,"Protoss Photon Cannon",3712,1728
+835,0,"Zerg",22425,"Zerg Queens Nest",496,3776
+839,1,"Protoss",17550,"Protoss Photon Cannon",3872,1792
+857,1,"Protoss",18250,"Protoss Photon Cannon",3904,1728
+860,1,"Protoss",18250,"Protoss Pylon",3808,1632
+872,1,"Protoss",18650,"Protoss Pylon",3296,3424
+878,1,"Protoss",19925,"Protoss Photon Cannon",2240,3808
+882,0,"Zerg",24575,"Zerg Hive",288,3760
+886,1,"Protoss",19925,"Protoss Photon Cannon",3872,1632
+894,1,"Protoss",20325,"Protoss Gateway",3392,3504
+897,1,"Protoss",20325,"Protoss Gateway",3392,3408
+901,1,"Protoss",20325,"Protoss Pylon",3296,3488
+906,1,"Protoss",21025,"Protoss Photon Cannon",2272,3744
+919,1,"Protoss",21625,"Protoss Gateway",3552,3632
+937,1,"Protoss",22525,"Protoss Photon Cannon",3808,1568
+937,1,"Protoss",22525,"Protoss Assimilator",3904,1888
+957,1,"Protoss",23150,"Protoss Photon Cannon",3808,1856
+976,1,"Protoss",24150,"Protoss Pylon",3680,288
+978,1,"Protoss",24150,"Protoss Nexus",3808,272
+1021,1,"Protoss",27150,"Protoss Photon Cannon",3872,1568
+1051,1,"Protoss",29450,"Protoss Nexus",2048,2064
+1067,1,"Protoss",29850,"Protoss Pylon",2048,2176
+1070,1,"Protoss",29850,"Protoss Pylon",2048,1984
+1078,1,"Protoss",30250,"Protoss Pylon",3776,3328
+1095,1,"Protoss",31200,"Protoss Photon Cannon",1984,1984
+1098,1,"Protoss",31200,"Protoss Photon Cannon",1952,2080
+1103,0,"Zerg",38150,"Zerg Defiler Mound",480,96
+1103,1,"Protoss",31525,"Protoss Photon Cannon",2144,2080
+1104,1,"Protoss",31525,"Protoss Photon Cannon",2144,2016
+1106,1,"Protoss",31975,"Protoss Photon Cannon",2112,2144
+1108,1,"Protoss",32225,"Protoss Robotics Support Bay",4016,3776
+1109,1,"Protoss",32225,"Protoss Photon Cannon",1984,2144
+1110,1,"Protoss",32475,"Protoss Robotics Facility",1968,2208
+1117,1,"Protoss",33325,"Protoss Photon Cannon",2112,2240
+1127,1,"Protoss",33575,"Protoss Gateway",3680,3312
+1128,1,"Protoss",33575,"Protoss Photon Cannon",1920,2016
+1131,1,"Protoss",33925,"Protoss Gateway",3936,3344
+1182,1,"Protoss",36550,"Protoss Photon Cannon",1952,2112
+1187,1,"Protoss",36950,"Protoss Assimilator",1792,2048
+1200,2,"Zerg",0,"Resource Vespene Geyser",1792,2048
+1247,1,"Protoss",40850,"Protoss Pylon",2176,2080
+1268,1,"Protoss",44100,"Protoss Pylon",1888,2272
+1284,1,"Protoss",44325,"Protoss Pylon",1952,2080
+1290,1,"Protoss",44425,"Protoss Nexus",2048,2064
+1369,1,"Protoss",51700,"Protoss Nexus",2048,2032
+1383,1,"Protoss",53200,"Protoss Pylon",2048,2240
+1422,2,"Zerg",0,"Resource Vespene Geyser",1248,3808
+1442,1,"Protoss",55900,"Protoss Photon Cannon",3744,1824
+1461,2,"Zerg",0,"Resource Vespene Geyser",288,3584
+1468,1,"Protoss",57575,"Protoss Photon Cannon",3712,1728
+1483,1,"Protoss",58700,"Protoss Pylon",192,2464
+Game ended
+
+50,1,"Protoss",350,"Protoss Pylon",3552,2944
+75,0,"Zerg",550,"Zerg Spawning Pool",176,3616
+80,1,"Protoss",450,"Protoss Forge",3344,3008
+123,1,"Protoss",650,"Protoss Photon Cannon",3424,3008
+127,1,"Protoss",650,"Protoss Photon Cannon",3424,2944
+Game ended
+
