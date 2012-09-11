@@ -1,7 +1,8 @@
 #include "ExampleAIModule.h"
 #include <sstream>
 #include <string>
-#include <iostream>
+#include<iostream>
+#include<ctime>
 #include <fstream>
 using namespace BWAPI;
 
@@ -19,8 +20,6 @@ void appendToFile(std::string in) {
 
 void ExampleAIModule::onStart()
 {
-	Broodwar->sendText("Hello world!");
-	Broodwar->printf("The map is %s, a %d player map",Broodwar->mapName().c_str(),Broodwar->getStartLocations().size());
 	// Enable some cheat flags
 	//Broodwar->enableFlag(Flag::UserInput);
 	// Uncomment to enable complete map information
@@ -52,12 +51,11 @@ void ExampleAIModule::onStart()
 
 }
 
+int match_counter = std::time(0);
+
 void ExampleAIModule::onEnd(bool isWinner)
 {
-	std::stringstream s;
-	s << "Game ended, isWinner: " << isWinner << "\n\n";
-	appendToFile(s.str());
-
+	match_counter++;
 }
 
 void logToCsv(BWAPI::Unit *unit) {
@@ -81,6 +79,7 @@ void logToCsv(BWAPI::Unit *unit) {
 		}
 
 		/*
+		* Match counter/id
 		* Time (in seconds),
 		* Player ID,
 		* Player race,
@@ -92,7 +91,8 @@ void logToCsv(BWAPI::Unit *unit) {
 		* Player worker count,
 		*/
 		std::stringstream s;
-		s	<< seconds << "," 
+		s	<< match_counter << ","
+			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
 			//<< e->getUnit()->getPlayer()->getName() << ","
 			<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
