@@ -1,8 +1,8 @@
 #include "ExampleAIModule.h"
 #include <sstream>
 #include <string>
-#include<iostream>
-#include<ctime>
+#include <iostream>
+#include <ctime>
 #include <fstream>
 using namespace BWAPI;
 
@@ -55,15 +55,16 @@ int match_counter = std::time(0);
 
 void ExampleAIModule::onEnd(bool isWinner)
 {
-	match_counter++;
 }
 
 void logToCsv(BWAPI::Unit *unit) {
+	if(!unit->getType().canMove()) return;
+
 	int seconds=Broodwar->getFrameCount()/24;
 
 	// Unit is a building
-	if (unit->getType().isBuilding())
-	{
+	//if (unit->getType().isBuilding())
+	//{
 		// Count workers
 		int playerWorkerCount = 0;
 
@@ -82,28 +83,33 @@ void logToCsv(BWAPI::Unit *unit) {
 		* Match counter/id
 		* Time (in seconds),
 		* Player ID,
+		* Player name,
 		* Player race,
 		* Player unitscore,
 		* Building name,
 		* Building position x,
 		* Building position y
 		* Player gathered gas,
+		* Player gathered minerals
 		* Player worker count,
 		*/
+
+		
 		std::stringstream s;
-		s	<< match_counter << ","
+		s	<< Broodwar->mapFileName() << ","
 			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
-			//<< e->getUnit()->getPlayer()->getName() << ","
+			<< "\"" << unit->getPlayer()->getName() << "\"" << ","
 			<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
 			<< unit->getPlayer()->getUnitScore() << ","
 			<< "\"" << unit->getType().getName().c_str() << "\"" << ","
 			<< unit->getPosition().x() << "," << unit->getPosition().y() << ","
 			<< unit->getPlayer()->gatheredGas() << ","
+			<< unit->getPlayer()->gatheredMinerals() << ","
 			<< playerWorkerCount
 			<< std::endl;
 		appendToFile(s.str());
-	}
+	//}
 
 }
 
@@ -193,13 +199,14 @@ void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
 		{
 			/*if we are in a replay, then we will print out the build order
 			(just of the buildings, not the units).*/
+			logToCsv(unit);
 			if (unit->getType().isBuilding() && unit->getPlayer()->isNeutral()==false)
 			{
 				int seconds=Broodwar->getFrameCount()/24;
 				int minutes=seconds/60;
 				seconds%=60;
 				Broodwar->sendText("%.2d:%.2d: %s creates a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
-				logToCsv(unit);
+				
 			}
 		}
 	}
@@ -219,13 +226,14 @@ void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
 	{
 		/*if we are in a replay, then we will print out the build order
 		(just of the buildings, not the units).*/
+		logToCsv(unit);
 		if (unit->getType().isBuilding() && unit->getPlayer()->isNeutral()==false)
 		{
 			int seconds=Broodwar->getFrameCount()/24;
 			int minutes=seconds/60;
 			seconds%=60;
 			Broodwar->sendText("%.2d:%.2d: %s morphs a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
-			logToCsv(unit);
+			
 		}
 	}
 }
