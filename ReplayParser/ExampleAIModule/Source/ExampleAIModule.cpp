@@ -11,22 +11,16 @@ bool analysis_just_finished;
 BWTA::Region* home;
 BWTA::Region* enemy_base;
 
+std::string myfileStr;
 void appendToFile(std::string in) {
-	std::ofstream myfile;
-	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
-	myfile << in;
-	myfile.close();
+	//myfileStr = myfileStr.append("\n");
+	myfileStr.append(in);
 }
 
 void ExampleAIModule::onStart()
 {
-	// Enable some cheat flags
-	//Broodwar->enableFlag(Flag::UserInput);
-	// Uncomment to enable complete map information
-	//Broodwar->enableFlag(Flag::CompleteMapInformation);
+	myfileStr = "";
 
-	//read map information into BWTA so terrain analysis can be done in another thread
-	//BWTA::readMap();
 	analyzed=false;
 	analysis_just_finished=false;
 
@@ -55,6 +49,10 @@ int match_counter = std::time(0);
 
 void ExampleAIModule::onEnd(bool isWinner)
 {
+	std::ofstream myfile;
+	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
+	myfile << myfileStr;
+	myfile.close();
 }
 
 void logToCsv(BWAPI::Unit *unit) {
