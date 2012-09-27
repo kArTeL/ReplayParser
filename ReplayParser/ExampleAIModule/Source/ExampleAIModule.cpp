@@ -54,9 +54,7 @@ void ExampleAIModule::onStart()
 
 void ExampleAIModule::onEnd(bool isWinner)
 {
-	std::stringstream s;
-	s << "Game ended, isWinner: " << isWinner << "\n\n";
-	appendToFile(s.str());
+	
 
 }
 
@@ -91,15 +89,30 @@ void logToCsv(BWAPI::Unit *unit) {
 		* Player gathered gas,
 		* Player worker count,
 		*/
+		//std::stringstream s;
+		//s	<< seconds << "," 
+		//	<< unit->getPlayer()->getID() << ","
+		//	//<< e->getUnit()->getPlayer()->getName() << ","
+		//	<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
+		//	<< unit->getPlayer()->getUnitScore() << ","
+		//	<< "\"" << unit->getType().getName().c_str() << "\"" << ","
+		//	<< unit->getPosition().x() << "," << unit->getPosition().y() << ","
+		//	<< unit->getPlayer()->gatheredGas() << ","
+		//	<< playerWorkerCount
+		//	<< std::endl;
+		//appendToFile(s.str());
+
 		std::stringstream s;
-		s	<< seconds << "," 
+		s	<< Broodwar->mapFileName() << ","
+			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
-			//<< e->getUnit()->getPlayer()->getName() << ","
+			<< "\"" << unit->getPlayer()->getName() << "\"" << ","
 			<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
 			<< unit->getPlayer()->getUnitScore() << ","
 			<< "\"" << unit->getType().getName().c_str() << "\"" << ","
 			<< unit->getPosition().x() << "," << unit->getPosition().y() << ","
 			<< unit->getPlayer()->gatheredGas() << ","
+			<< unit->getPlayer()->gatheredMinerals() << ","
 			<< playerWorkerCount
 			<< std::endl;
 		appendToFile(s.str());
@@ -162,7 +175,10 @@ void ExampleAIModule::onNukeDetect(BWAPI::Position target)
 void ExampleAIModule::onUnitDiscover(BWAPI::Unit* unit)
 {
 	if (!Broodwar->isReplay() && Broodwar->getFrameCount()>1)
+	{
 		Broodwar->sendText("A %s [%x] has been discovered at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
+	}
+	
 }
 
 void ExampleAIModule::onUnitEvade(BWAPI::Unit* unit)
