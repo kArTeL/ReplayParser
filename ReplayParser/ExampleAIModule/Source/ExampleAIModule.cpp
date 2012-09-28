@@ -10,22 +10,18 @@ bool analysis_just_finished;
 BWTA::Region* home;
 BWTA::Region* enemy_base;
 
+std::string fileStr;
+
 void appendToFile(std::string in) {
-	std::ofstream myfile;
-	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
-	myfile << in;
-	myfile.close();
+	fileStr.append(in);
 }
 
 void ExampleAIModule::onStart()
 {
-	Broodwar->sendText("Hello world!");
-	Broodwar->printf("The map is %s, a %d player map",Broodwar->mapName().c_str(),Broodwar->getStartLocations().size());
-	// Enable some cheat flags
-	//Broodwar->enableFlag(Flag::UserInput);
-	// Uncomment to enable complete map information
-	//Broodwar->enableFlag(Flag::CompleteMapInformation);
+	fileStr = "";
 
+	Broodwar->printf("The map is %s, a %d player map",Broodwar->mapName().c_str(),Broodwar->getStartLocations().size());
+	
 	//read map information into BWTA so terrain analysis can be done in another thread
 	//BWTA::readMap();
 	analyzed=false;
@@ -54,8 +50,10 @@ void ExampleAIModule::onStart()
 
 void ExampleAIModule::onEnd(bool isWinner)
 {
-	
-
+	std::ofstream myfile;
+	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
+	myfile << fileStr;
+	myfile.close();
 }
 
 void logToCsv(BWAPI::Unit *unit) {
@@ -89,24 +87,14 @@ void logToCsv(BWAPI::Unit *unit) {
 		* Player gathered gas,
 		* Player worker count,
 		*/
-		//std::stringstream s;
-		//s	<< seconds << "," 
-		//	<< unit->getPlayer()->getID() << ","
-		//	//<< e->getUnit()->getPlayer()->getName() << ","
-		//	<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
-		//	<< unit->getPlayer()->getUnitScore() << ","
-		//	<< "\"" << unit->getType().getName().c_str() << "\"" << ","
-		//	<< unit->getPosition().x() << "," << unit->getPosition().y() << ","
-		//	<< unit->getPlayer()->gatheredGas() << ","
-		//	<< playerWorkerCount
-		//	<< std::endl;
-		//appendToFile(s.str());
+
 
 		std::stringstream s;
-		s	<< Broodwar->mapFileName() << ","
+		s	<< Broodwar->mapFileName().c_str() << ","
+			<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
 			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
-			<< "\"" << unit->getPlayer()->getName() << "\"" << ","
+			<< "\"" << unit->getPlayer()->getName().c_str() << "\"" << ","
 			<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
 			<< unit->getPlayer()->getUnitScore() << ","
 			<< "\"" << unit->getType().getName().c_str() << "\"" << ","
@@ -156,20 +144,20 @@ void ExampleAIModule::onSendText(std::string text)
 
 void ExampleAIModule::onReceiveText(BWAPI::Player* player, std::string text)
 {
-	Broodwar->printf("%s said '%s'", player->getName().c_str(), text.c_str());
+	//Broodwar->printf("%s said '%s'", player->getName().c_str(), text.c_str());
 }
 
 void ExampleAIModule::onPlayerLeft(BWAPI::Player* player)
 {
-	Broodwar->sendText("%s left the game.",player->getName().c_str());
+	//Broodwar->sendText("%s left the game.",player->getName().c_str());
 }
 
 void ExampleAIModule::onNukeDetect(BWAPI::Position target)
 {
-	if (target!=Positions::Unknown)
-		Broodwar->printf("Nuclear Launch Detected at (%d,%d)",target.x(),target.y());
-	else
-		Broodwar->printf("Nuclear Launch Detected");
+	//if (target!=Positions::Unknown)
+	//	Broodwar->printf("Nuclear Launch Detected at (%d,%d)",target.x(),target.y());
+	//else
+	//	Broodwar->printf("Nuclear Launch Detected");
 }
 
 void ExampleAIModule::onUnitDiscover(BWAPI::Unit* unit)
@@ -214,7 +202,7 @@ void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
 				int seconds=Broodwar->getFrameCount()/24;
 				int minutes=seconds/60;
 				seconds%=60;
-				Broodwar->sendText("%.2d:%.2d: %s creates a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
+				//Broodwar->sendText("%.2d:%.2d: %s creates a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
 				logToCsv(unit);
 			}
 		}
@@ -240,7 +228,7 @@ void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
 			int seconds=Broodwar->getFrameCount()/24;
 			int minutes=seconds/60;
 			seconds%=60;
-			Broodwar->sendText("%.2d:%.2d: %s morphs a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
+			//Broodwar->sendText("%.2d:%.2d: %s morphs a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
 			logToCsv(unit);
 		}
 	}
@@ -254,10 +242,8 @@ void ExampleAIModule::onUnitRenegade(BWAPI::Unit* unit)
 
 void ExampleAIModule::onSaveGame(std::string gameName)
 {
-	Broodwar->printf("The game was saved to \"%s\".", gameName.c_str());
+	//Broodwar->printf("The game was saved to \"%s\".", gameName.c_str());
 }
-
-
 
 void ExampleAIModule::drawStats()
 {
