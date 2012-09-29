@@ -91,10 +91,10 @@ void logToCsv(BWAPI::Unit *unit) {
 
 		std::stringstream s;
 		s	<< Broodwar->mapFileName().c_str() << ","
-			<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
+			//<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
 			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
-			<< "\"" << unit->getPlayer()->getName().c_str() << "\"" << ","
+			//<< "\"" << unit->getPlayer()->getName().c_str() << "\"" << ","
 			<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
 			<< unit->getPlayer()->getUnitScore() << ","
 			<< "\"" << unit->getType().getName().c_str() << "\"" << ","
