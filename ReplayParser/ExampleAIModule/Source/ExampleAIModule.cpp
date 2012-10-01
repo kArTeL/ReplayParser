@@ -2,6 +2,7 @@
 #include <sstream>
 #include <string>
 #include <iostream>
+#include<ctime>
 #include <fstream>
 using namespace BWAPI;
 
@@ -12,8 +13,17 @@ BWTA::Region* enemy_base;
 
 std::string fileStr;
 
+int match_counter = std::time(0);
+
 void appendToFile(std::string in) {
 	fileStr.append(in);
+
+	std::ofstream myfile;
+	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
+	myfile << fileStr;
+	myfile.close();
+
+	fileStr = "";
 }
 
 void ExampleAIModule::onStart()
@@ -50,10 +60,9 @@ void ExampleAIModule::onStart()
 
 void ExampleAIModule::onEnd(bool isWinner)
 {
-	std::ofstream myfile;
-	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
-	myfile << fileStr;
-	myfile.close();
+	match_counter++;
+
+
 }
 
 void logToCsv(BWAPI::Unit *unit) {
@@ -90,7 +99,8 @@ void logToCsv(BWAPI::Unit *unit) {
 
 
 		std::stringstream s;
-		s	<< Broodwar->mapFileName().c_str() << ","
+		s	<< match_counter << ","
+			<< Broodwar->mapFileName().c_str() << ","
 			//<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
 			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
