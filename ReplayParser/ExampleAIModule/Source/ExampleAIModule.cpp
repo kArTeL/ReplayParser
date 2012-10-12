@@ -28,7 +28,6 @@ void appendToFile(std::string in) {
 
 void ExampleAIModule::onStart()
 {
-<<<<<<< HEAD
 	// Enable some cheat flags
 	//Broodwar->enableFlag(Flag::UserInput);
 	// Uncomment to enable complete map information
@@ -55,12 +54,12 @@ void ExampleAIModule::onStart()
 				Broodwar->printf("%s, playing as a %s",(*p)->getName().c_str(),(*p)->getRace().getName().c_str());
 			}
 		}
+		
+		/*std::stringstream ss;
+		ss << "PlayerCount: " << Broodwar->getPlayers().size();
+		appendToFile(ss.str());*/
 	}
-
-
 }
-
-int match_counter = std::time(0);
 
 void ExampleAIModule::onEnd(bool isWinner)
 {
@@ -70,8 +69,13 @@ void ExampleAIModule::onEnd(bool isWinner)
 void logToCsv(BWAPI::Unit *unit) {
 	int seconds=Broodwar->getFrameCount()/24;
 
+	// Ignore certain zerg units
+	if( unit->getType() == BWAPI::UnitTypes::Zerg_Egg || 
+		unit->getType() == BWAPI::UnitTypes::Zerg_Larva) return;
+
 	// Unit is a building
-	if (unit->getType().isBuilding())
+	//if (unit->getType().isBuilding())
+	if(Broodwar->getFrameCount() > 1 && Broodwar->getPlayers().size() == 3)
 	{
 		// Count workers
 		int playerWorkerCount = 0;
@@ -87,25 +91,13 @@ void logToCsv(BWAPI::Unit *unit) {
 			}
 		}
 
-		/*
-		* Match counter/id
-		* Time (in seconds),
-		* Player ID,
-		* Player race,
-		* Player unitscore,
-		* Building name,
-		* Building position x,
-		* Building position y
-		* Player gathered gas,
-		* Player worker count,
-		*/
 		std::stringstream s;
 		s	<< match_counter << ","
 			<< Broodwar->mapFileName().c_str() << ","
-			//<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
+			<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
 			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
-			//<< e->getUnit()->getPlayer()->getName() << ","
+			<< "\"" << unit->getPlayer()->getName() << "\"" << ","
 			<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
 			<< unit->getPlayer()->getUnitScore() << ","
 			<< "\"" << unit->getType().getName().c_str() << "\"" << ","
@@ -208,7 +200,7 @@ void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
 		{
 			/*if we are in a replay, then we will print out the build order
 			(just of the buildings, not the units).*/
-			if (unit->getType().isBuilding() && unit->getPlayer()->isNeutral()==false)
+			if (unit->getPlayer()->isNeutral()==false)
 			{
 				int seconds=Broodwar->getFrameCount()/24;
 				int minutes=seconds/60;
@@ -234,7 +226,7 @@ void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
 	{
 		/*if we are in a replay, then we will print out the build order
 		(just of the buildings, not the units).*/
-		if (unit->getType().isBuilding() && unit->getPlayer()->isNeutral()==false)
+		if (unit->getPlayer()->isNeutral()==false)
 		{
 			int seconds=Broodwar->getFrameCount()/24;
 			int minutes=seconds/60;
