@@ -11,15 +11,24 @@ bool analysis_just_finished;
 BWTA::Region* home;
 BWTA::Region* enemy_base;
 
+std::string fileStr;
+
+int match_counter = std::time(0);
+
 void appendToFile(std::string in) {
+	fileStr.append(in);
+
 	std::ofstream myfile;
 	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
 	myfile << in;
 	myfile.close();
+
+	fileStr = "";
 }
 
 void ExampleAIModule::onStart()
 {
+<<<<<<< HEAD
 	// Enable some cheat flags
 	//Broodwar->enableFlag(Flag::UserInput);
 	// Uncomment to enable complete map information
@@ -92,6 +101,8 @@ void logToCsv(BWAPI::Unit *unit) {
 		*/
 		std::stringstream s;
 		s	<< match_counter << ","
+			<< Broodwar->mapFileName().c_str() << ","
+			//<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
 			<< seconds << "," 
 			<< unit->getPlayer()->getID() << ","
 			//<< e->getUnit()->getPlayer()->getName() << ","
@@ -100,6 +111,7 @@ void logToCsv(BWAPI::Unit *unit) {
 			<< "\"" << unit->getType().getName().c_str() << "\"" << ","
 			<< unit->getPosition().x() << "," << unit->getPosition().y() << ","
 			<< unit->getPlayer()->gatheredGas() << ","
+			<< unit->getPlayer()->gatheredMinerals() << ","
 			<< playerWorkerCount
 			<< std::endl;
 		appendToFile(s.str());
@@ -143,26 +155,29 @@ void ExampleAIModule::onSendText(std::string text)
 
 void ExampleAIModule::onReceiveText(BWAPI::Player* player, std::string text)
 {
-	Broodwar->printf("%s said '%s'", player->getName().c_str(), text.c_str());
+	//Broodwar->printf("%s said '%s'", player->getName().c_str(), text.c_str());
 }
 
 void ExampleAIModule::onPlayerLeft(BWAPI::Player* player)
 {
-	Broodwar->sendText("%s left the game.",player->getName().c_str());
+	//Broodwar->sendText("%s left the game.",player->getName().c_str());
 }
 
 void ExampleAIModule::onNukeDetect(BWAPI::Position target)
 {
-	if (target!=Positions::Unknown)
-		Broodwar->printf("Nuclear Launch Detected at (%d,%d)",target.x(),target.y());
-	else
-		Broodwar->printf("Nuclear Launch Detected");
+	//if (target!=Positions::Unknown)
+	//	Broodwar->printf("Nuclear Launch Detected at (%d,%d)",target.x(),target.y());
+	//else
+	//	Broodwar->printf("Nuclear Launch Detected");
 }
 
 void ExampleAIModule::onUnitDiscover(BWAPI::Unit* unit)
 {
 	if (!Broodwar->isReplay() && Broodwar->getFrameCount()>1)
+	{
 		Broodwar->sendText("A %s [%x] has been discovered at (%d,%d)",unit->getType().getName().c_str(),unit,unit->getPosition().x(),unit->getPosition().y());
+	}
+	
 }
 
 void ExampleAIModule::onUnitEvade(BWAPI::Unit* unit)
@@ -240,8 +255,6 @@ void ExampleAIModule::onSaveGame(std::string gameName)
 {
 	Broodwar->printf("The game was saved to \"%s\".", gameName.c_str());
 }
-
-
 
 void ExampleAIModule::drawStats()
 {
