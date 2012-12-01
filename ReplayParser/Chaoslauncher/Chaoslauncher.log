@@ -1,0 +1,205 @@
+24-11-2012 00:50:06 7580 Logging started
+24-11-2012 00:50:06 7580 Begin Startup
+24-11-2012 00:50:06 7580 Chaosauncher 0.5.4.4 on NT 6.2.9200  at C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Chaoslauncher.exe
+24-11-2012 00:50:06 7580 Load Settings
+24-11-2012 00:50:06 7580 GamePath: F:\output\Starcraft\
+24-11-2012 00:50:06 7580 Load Plugins
+24-11-2012 00:50:06 7580 AdvLoaderPluginPath: \Plugins\
+24-11-2012 00:50:06 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\BWAPI_ChaosLauncherInjector.bwl
+24-11-2012 00:50:06 7580 Plugin loaded BWAPI Injector (1.16.1) RELEASE
+24-11-2012 00:50:06 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\BWAPI_ChaosLauncherInjectord.bwl
+24-11-2012 00:50:06 7580 Plugin loaded BWAPI Injector (1.16.1) DEBUG
+24-11-2012 00:50:06 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\iccscbn.icc
+24-11-2012 00:50:09 7580 Plugin loaded ICCup
+24-11-2012 00:50:09 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\APMAlert.bwl
+24-11-2012 00:50:10 7580 Plugin loaded APMAlert (1.16.1)
+24-11-2012 00:50:10 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\Chaosplugin.bwl
+24-11-2012 00:50:10 7580 Plugin loaded Chaosplugin for 1.16.1
+24-11-2012 00:50:10 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\icctv.bwl
+24-11-2012 00:50:10 7580 Plugin loaded ICCup TV Streamer
+24-11-2012 00:50:10 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\icctvp.bwl
+24-11-2012 00:50:10 7580 Plugin loaded ICCup TV Player
+24-11-2012 00:50:10 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\LatencyChanger.bwl
+24-11-2012 00:50:11 7580 Plugin loaded LatencyChanger for 1.16.1
+24-11-2012 00:50:11 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\repfix.bwl
+24-11-2012 00:50:11 7580 Plugin loaded RepFix
+24-11-2012 00:50:11 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\RWAPlayer.bwl
+24-11-2012 00:50:12 7580 Plugin loaded RWAPlayer (1.16.1)
+24-11-2012 00:50:12 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\RWARecorder.bwl
+24-11-2012 00:50:12 7580 Plugin loaded RWARecorder (1.16.1)
+24-11-2012 00:50:12 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\Stormplugin.bwl
+24-11-2012 00:50:13 7580 Plugin loaded Stormplugin for 1.16.1
+24-11-2012 00:50:13 7580 Loading BWL4-Plugin C:\Users\daddy_000\Documents\GitHub\ReplayParser\ReplayParser\Chaoslauncher\Plugins\wmode.bwl
+24-11-2012 00:50:13 7580 Plugin loaded W-MODE 1.02
+24-11-2012 00:50:13 7580 Load Tools
+24-11-2012 00:50:13 7580 Init GUI
+24-11-2012 00:50:13 7580 Get Starcraftversions
+24-11-2012 00:50:13 7580 Init complete
+24-11-2012 00:50:21 7580 Startbutton
+24-11-2012 00:50:21 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 00:50:21 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 00:50:21 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 00:50:21 7580 Obtained DebugPrivilege
+24-11-2012 00:50:21 7580 CreateProcess
+24-11-2012 00:50:21 7580 Call ScSuspended for all active Plugins
+24-11-2012 00:50:21 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 00:50:57 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 00:50:57 7580 ResumeThread
+24-11-2012 00:50:57 7580 WaitForInputIdle
+24-11-2012 00:50:57 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 00:50:57 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 00:50:57 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 00:50:57 7580 Starting Starcraft completed
+24-11-2012 00:54:54 7580 Startbutton
+24-11-2012 00:54:54 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 00:54:54 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 00:54:54 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 00:54:54 7580 Obtained DebugPrivilege
+24-11-2012 00:54:54 7580 CreateProcess
+24-11-2012 00:54:54 7580 Call ScSuspended for all active Plugins
+24-11-2012 00:54:54 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 00:55:15 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 00:55:15 7580 ResumeThread
+24-11-2012 00:55:15 7580 WaitForInputIdle
+24-11-2012 00:55:15 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 00:55:15 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 00:55:15 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 00:55:15 7580 Starting Starcraft completed
+24-11-2012 00:58:59 7580 Startbutton
+24-11-2012 00:58:59 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 00:58:59 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 00:58:59 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 00:58:59 7580 Obtained DebugPrivilege
+24-11-2012 00:58:59 7580 CreateProcess
+24-11-2012 00:58:59 7580 Call ScSuspended for all active Plugins
+24-11-2012 00:58:59 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 00:59:05 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 00:59:05 7580 ResumeThread
+24-11-2012 00:59:05 7580 WaitForInputIdle
+24-11-2012 00:59:05 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 00:59:05 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 00:59:05 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 00:59:05 7580 Starting Starcraft completed
+24-11-2012 01:01:00 7580 Startbutton
+24-11-2012 01:01:00 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 01:01:00 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 01:01:00 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 01:01:00 7580 Obtained DebugPrivilege
+24-11-2012 01:01:00 7580 CreateProcess
+24-11-2012 01:01:00 7580 Call ScSuspended for all active Plugins
+24-11-2012 01:01:00 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 01:01:02 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 01:01:02 7580 ResumeThread
+24-11-2012 01:01:02 7580 WaitForInputIdle
+24-11-2012 01:01:02 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 01:01:02 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 01:01:02 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 01:01:02 7580 Starting Starcraft completed
+24-11-2012 01:02:30 7580 Startbutton
+24-11-2012 01:02:30 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 01:02:30 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 01:02:30 7580 RepFix Version 0.0.0.4 Compatible
+24-11-2012 01:02:30 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 01:02:30 7580 Obtained DebugPrivilege
+24-11-2012 01:02:30 7580 CreateProcess
+24-11-2012 01:02:30 7580 Call ScSuspended for all active Plugins
+24-11-2012 01:02:30 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 01:02:33 7580 ApplyPatchSuspended for RepFix
+24-11-2012 01:02:33 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 01:02:33 7580 ResumeThread
+24-11-2012 01:02:33 7580 WaitForInputIdle
+24-11-2012 01:02:33 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 01:02:33 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 01:02:33 7580 ApplyPatch for RepFix
+24-11-2012 01:02:33 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 01:02:33 7580 Starting Starcraft completed
+24-11-2012 01:45:16 7580 Startbutton
+24-11-2012 01:45:16 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 01:45:16 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 01:45:16 7580 RepFix Version 0.0.0.4 Compatible
+24-11-2012 01:45:16 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 01:45:16 7580 Obtained DebugPrivilege
+24-11-2012 01:45:16 7580 CreateProcess
+24-11-2012 01:45:16 7580 Call ScSuspended for all active Plugins
+24-11-2012 01:45:16 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 01:45:19 7580 ApplyPatchSuspended for RepFix
+24-11-2012 01:45:19 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 01:45:19 7580 ResumeThread
+24-11-2012 01:45:19 7580 WaitForInputIdle
+24-11-2012 01:45:19 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 01:45:19 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 01:45:19 7580 ApplyPatch for RepFix
+24-11-2012 01:45:19 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 01:45:19 7580 Starting Starcraft completed
+24-11-2012 02:36:56 7580 Startbutton
+24-11-2012 02:36:56 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 02:36:56 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 02:36:56 7580 RepFix Version 0.0.0.4 Compatible
+24-11-2012 02:36:56 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 02:36:56 7580 Obtained DebugPrivilege
+24-11-2012 02:36:56 7580 CreateProcess
+24-11-2012 02:36:56 7580 Call ScSuspended for all active Plugins
+24-11-2012 02:36:56 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:36:59 7580 ApplyPatchSuspended for RepFix
+24-11-2012 02:36:59 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 02:36:59 7580 ResumeThread
+24-11-2012 02:36:59 7580 WaitForInputIdle
+24-11-2012 02:36:59 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 02:36:59 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:36:59 7580 ApplyPatch for RepFix
+24-11-2012 02:36:59 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 02:36:59 7580 Starting Starcraft completed
+24-11-2012 02:37:15 7580 Startbutton
+24-11-2012 02:37:15 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 02:37:15 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 02:37:15 7580 RepFix Version 0.0.0.4 Compatible
+24-11-2012 02:37:15 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 02:37:15 7580 Obtained DebugPrivilege
+24-11-2012 02:37:15 7580 CreateProcess
+24-11-2012 02:37:15 7580 Call ScSuspended for all active Plugins
+24-11-2012 02:37:15 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:37:17 7580 ApplyPatchSuspended for RepFix
+24-11-2012 02:37:17 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 02:37:17 7580 ResumeThread
+24-11-2012 02:37:17 7580 WaitForInputIdle
+24-11-2012 02:37:18 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 02:37:18 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:37:18 7580 ApplyPatch for RepFix
+24-11-2012 02:37:18 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 02:37:18 7580 Starting Starcraft completed
+24-11-2012 02:38:22 7580 Startbutton
+24-11-2012 02:38:22 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 02:38:22 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 02:38:22 7580 RepFix Version 0.0.0.4 Compatible
+24-11-2012 02:38:22 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 02:38:22 7580 Obtained DebugPrivilege
+24-11-2012 02:38:22 7580 CreateProcess
+24-11-2012 02:38:22 7580 Call ScSuspended for all active Plugins
+24-11-2012 02:38:22 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:38:24 7580 ApplyPatchSuspended for RepFix
+24-11-2012 02:38:24 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 02:38:24 7580 ResumeThread
+24-11-2012 02:38:24 7580 WaitForInputIdle
+24-11-2012 02:38:24 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 02:38:24 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:38:24 7580 ApplyPatch for RepFix
+24-11-2012 02:38:24 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 02:38:24 7580 Starting Starcraft completed
+24-11-2012 02:39:10 7580 Startbutton
+24-11-2012 02:39:10 7580 Starting Game Starcraft 1.16.1 F:\output\Starcraft\StarCraft.exe
+24-11-2012 02:39:10 7580 BWAPI Injector (1.16.1) RELEASE Version  Compatible
+24-11-2012 02:39:10 7580 RepFix Version 0.0.0.4 Compatible
+24-11-2012 02:39:10 7580 W-MODE 1.02 Version 1.0.2 Compatible
+24-11-2012 02:39:10 7580 Obtained DebugPrivilege
+24-11-2012 02:39:10 7580 CreateProcess
+24-11-2012 02:39:10 7580 Call ScSuspended for all active Plugins
+24-11-2012 02:39:10 7580 ApplyPatchSuspended for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:39:12 7580 ApplyPatchSuspended for RepFix
+24-11-2012 02:39:12 7580 ApplyPatchSuspended for W-MODE 1.02
+24-11-2012 02:39:12 7580 ResumeThread
+24-11-2012 02:39:12 7580 WaitForInputIdle
+24-11-2012 02:39:12 7580 Call ScWindowCreated for all active Plugins
+24-11-2012 02:39:12 7580 ApplyPatch for BWAPI Injector (1.16.1) RELEASE
+24-11-2012 02:39:12 7580 ApplyPatch for RepFix
+24-11-2012 02:39:12 7580 ApplyPatch for W-MODE 1.02
+24-11-2012 02:39:12 7580 Starting Starcraft completed

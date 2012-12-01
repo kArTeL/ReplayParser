@@ -11,19 +11,16 @@ bool analysis_just_finished;
 BWTA::Region* home;
 BWTA::Region* enemy_base;
 
-std::string fileStr;
-
 int match_counter = std::time(0);
+int event_counter_playerone = 0;
+int event_counter_playertwo = 0;
 
 void appendToFile(std::string in) {
-	fileStr.append(in);
-
+	
 	std::ofstream myfile;
 	myfile.open ("output.txt", std::ios::out | std::ios::app); // append
 	myfile << in;
 	myfile.close();
-
-	fileStr = "";
 }
 
 void ExampleAIModule::onStart()
@@ -41,7 +38,7 @@ void ExampleAIModule::onStart()
 	show_bullets=false;
 	show_visibility_data=false;
 
-	Broodwar->setLocalSpeed(0);
+	Broodwar->setLocalSpeed(1);
 	Broodwar->setGUI(false);
 
 	if (Broodwar->isReplay())
@@ -73,8 +70,6 @@ void logToCsv(BWAPI::Unit *unit) {
 	if( unit->getType() == BWAPI::UnitTypes::Zerg_Egg || 
 		unit->getType() == BWAPI::UnitTypes::Zerg_Larva) return;
 
-	// Unit is a building
-	//if (unit->getType().isBuilding())
 	if(Broodwar->getFrameCount() > 1 && Broodwar->getPlayers().size() == 3)
 	{
 		// Count workers
@@ -91,17 +86,19 @@ void logToCsv(BWAPI::Unit *unit) {
 			}
 		}
 
+		int c = 0;
+		if(unit->getPlayer()->getID() == 0) c = ++event_counter_playerone;
+		else c = ++event_counter_playertwo;
 		std::stringstream s;
 		s	<< match_counter << ","
+			<< c << ","
 			<< Broodwar->mapFileName().c_str() << ","
-			<< "\"" << Broodwar->mapName().c_str() << "\"" << ","
-			<< seconds << "," 
-			<< unit->getPlayer()->getID() << ","
-			<< "\"" << unit->getPlayer()->getName() << "\"" << ","
-			<< "\"" << unit->getPlayer()->getRace().c_str() <<  "\"" << ","
+			<< Broodwar->mapName().c_str() << ","
+			<< Broodwar->getFrameCount() << "," 
+			<< unit->getPlayer()->getName().c_str() << ","
+			<< unit->getType().getName().c_str() << "," // Building name
 			<< unit->getPlayer()->getUnitScore() << ","
-			<< "\"" << unit->getType().getName().c_str() << "\"" << ","
-			<< unit->getPosition().x() << "," << unit->getPosition().y() << ","
+			//<< unit->getPosition().x() << "," << unit->getPosition().y() << ","
 			<< unit->getPlayer()->gatheredGas() << ","
 			<< unit->getPlayer()->gatheredMinerals() << ","
 			<< playerWorkerCount
@@ -206,7 +203,7 @@ void ExampleAIModule::onUnitCreate(BWAPI::Unit* unit)
 				int minutes=seconds/60;
 				seconds%=60;
 				Broodwar->sendText("%.2d:%.2d: %s creates a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
-				logToCsv(unit);
+				if(unit->getType().isBuilding()) logToCsv(unit);
 			}
 		}
 	}
@@ -232,7 +229,7 @@ void ExampleAIModule::onUnitMorph(BWAPI::Unit* unit)
 			int minutes=seconds/60;
 			seconds%=60;
 			Broodwar->sendText("%.2d:%.2d: %s morphs a %s",minutes,seconds,unit->getPlayer()->getName().c_str(),unit->getType().getName().c_str());
-			logToCsv(unit);
+			if(unit->getType().isBuilding()) logToCsv(unit);
 		}
 	}
 }
