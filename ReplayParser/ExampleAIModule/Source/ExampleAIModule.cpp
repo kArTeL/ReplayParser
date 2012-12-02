@@ -38,7 +38,7 @@ void ExampleAIModule::onStart()
 	show_bullets=false;
 	show_visibility_data=false;
 
-	Broodwar->setLocalSpeed(1);
+	Broodwar->setLocalSpeed(0);
 	Broodwar->setGUI(false);
 
 	if (Broodwar->isReplay())
