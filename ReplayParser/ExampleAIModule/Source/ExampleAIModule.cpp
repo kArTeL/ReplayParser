@@ -68,7 +68,10 @@ void logToCsv(BWAPI::Unit *unit) {
 
 	// Ignore certain zerg units
 	if( unit->getType() == BWAPI::UnitTypes::Zerg_Egg || 
-		unit->getType() == BWAPI::UnitTypes::Zerg_Larva) return;
+		unit->getType() == BWAPI::UnitTypes::Zerg_Larva ||
+		unit->getType() == BWAPI::UnitTypes::Protoss_Pylon || 
+		unit->getType() == BWAPI::UnitTypes::Terran_Supply_Depot ||
+		unit->getType() == BWAPI::UnitTypes::Zerg_Overlord) return;
 
 	if(Broodwar->getFrameCount() > 1 && Broodwar->getPlayers().size() == 3)
 	{
